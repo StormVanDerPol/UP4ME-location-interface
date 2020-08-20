@@ -1,0 +1,23 @@
+.navbar-session-info {
+  font-size: 0.666rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar-menu-item {
+  list-style-type: none;
+  padding: 1rem;
+  border: 1px solid gray;
+  margin-right: 0.5rem;
+}
+/*# sourceMappingURL=Navigation.css.map */

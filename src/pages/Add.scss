@@ -1,0 +1,81 @@
+@import "../scss/variables";
+
+.add {
+    position: relative;
+    $xmargin: 4rem;
+
+    margin: 1.5rem auto;
+    width: $screen-lg;
+
+    @media screen and (max-width: $screen-lg + $xmargin) {
+        width: $screen-md;
+    }
+    @media screen and (max-width: $screen-md + $xmargin) {
+        width: $screen-s;
+    }
+    @media screen and (max-width: $screen-s + $xmargin) {
+        width: $screen-xs;
+    }
+    @media screen and (max-width: $screen-xs + $xmargin) {
+        width: $screen-t;
+    }
+    @media screen and (max-width: $screen-t + $xmargin) {
+        width: $screen-xt;
+    }
+
+    &-image {
+        display: none;
+    }
+
+    &-image-upload {
+        display: block;
+    }
+
+    &-submit {
+        display: block;
+
+        height: 8rem;
+        width: 8rem;
+        position: fixed;
+        right: 4rem;
+        bottom: 4rem;
+
+        @media screen and (max-width: $screen-lg) {
+        }
+        @media screen and (max-width: $screen-md) {
+        }
+        @media screen and (max-width: $screen-s) {
+        }
+        @media screen and (max-width: $screen-xs) {
+            position: static;
+            width: 100%;
+            height: 8rem;
+        }
+        @media screen and (max-width: $screen-t) {
+        }
+    }
+
+    &-image-compressed {
+        margin: 24px 0;
+
+        display: block;
+        min-width: 8rem;
+        width: fit-content;
+        min-height: 8rem;
+        height: fit-content;
+        border: 1px solid black;
+        background-color: rgb(207, 207, 207);
+
+        &-image {
+            display: block;
+        }
+    }
+
+    &-address {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+        }
+    }
+}

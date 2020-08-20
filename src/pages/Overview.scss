@@ -1,0 +1,124 @@
+@import "../scss/variables";
+
+$xmargin: 4rem;
+
+.overview {
+    margin: 1.5rem auto;
+    width: $screen-lg;
+
+    @media screen and (max-width: $screen-lg + $xmargin) {
+        width: $screen-md;
+    }
+    @media screen and (max-width: $screen-md + $xmargin) {
+        width: $screen-s;
+    }
+    @media screen and (max-width: $screen-s + $xmargin) {
+        width: $screen-xs;
+    }
+    @media screen and (max-width: $screen-xs + $xmargin) {
+        width: $screen-t;
+    }
+    @media screen and (max-width: $screen-t + $xmargin) {
+        width: $screen-xt;
+    }
+
+    &-list {
+        border: 1px solid rgb(153, 153, 153);
+        background-color: rgb(201, 201, 201);
+        height: 45rem /* 720/16 */;
+        overflow-y: scroll;
+    }
+}
+
+.city-selector {
+    border: 1px solid gray;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.location-item {
+    position: relative;
+    display: flex;
+
+    width: 37.5rem /* 600/16 */;
+
+    @media screen and (max-width: $screen-s + $xmargin) {
+        width: 25rem /* 400/16 */;
+    }
+    @media screen and (max-width: $screen-xs + $xmargin) {
+        width: 18.75rem /* 300/16 */;
+        flex-wrap: wrap;
+    }
+    @media screen and (max-width: $screen-t + $xmargin) {
+        width: 15.625rem /* 250/16 */;
+    }
+
+    margin: 1.5rem /* 24/16 */ auto;
+    padding: 1rem /* 24/16 */;
+
+    border: 1px solid black;
+    background-color: rgb(230, 230, 230);
+
+    &-section {
+        flex: 1;
+    }
+
+    &-image {
+        display: block;
+
+        margin-left: auto;
+
+        @media screen and (max-width: $screen-xs + $xmargin) {
+            margin: 1.5rem /* 24/16 */ auto;
+        }
+    }
+
+    &-text {
+        display: block;
+        max-width: 22.5rem /* 360/16 */;
+    }
+
+    &-edit {
+        display: block;
+        width: fit-content;
+        border: 1px solid black;
+        background: rgb(167, 167, 167);
+
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: rgb(196, 196, 196);
+        }
+
+        margin: 0.3125rem /* 5/16 */ 0;
+        margin-left: auto;
+
+        @media screen and (max-width: $screen-xs + $xmargin) {
+            margin: 0.3125rem auto;
+        }
+
+        padding: 1rem /* 5/16 */;
+    }
+
+    // &-edit-btn {
+    //     position: absolute;
+    //     right: 0.2rem;
+    //     top: 0.2rem;
+
+    //     border-radius: 1.5625rem /* 25/16 */;
+
+    //     width: fit-content;
+    //     display: block;
+    //     border: 1px solid black;
+    //     background-color: rgb(111, 204, 207);
+    //     opacity: 0.5;
+
+    //     transition: background-color, opacity 0.5s ease-in-out;
+
+    //     &:hover {
+    //         opacity: 0.8;
+    //     }
+
+    //     padding: 0.625rem /* 10/16 */;
+    // }
+}
