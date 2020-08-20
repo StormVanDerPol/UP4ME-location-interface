@@ -1,0 +1,126 @@
+.overview {
+  margin: 1.5rem auto;
+  width: 75rem;
+}
+
+@media screen and (max-width: 79rem) {
+  .overview {
+    width: 62rem;
+  }
+}
+
+@media screen and (max-width: 66rem) {
+  .overview {
+    width: 48rem;
+  }
+}
+
+@media screen and (max-width: 52rem) {
+  .overview {
+    width: 37.5rem;
+  }
+}
+
+@media screen and (max-width: 41.5rem) {
+  .overview {
+    width: 25.875rem;
+  }
+}
+
+@media screen and (max-width: 29.875rem) {
+  .overview {
+    width: 22.5rem;
+  }
+}
+
+.overview-list {
+  border: 1px solid #999999;
+  background-color: #c9c9c9;
+  height: 45rem;
+  overflow-y: scroll;
+}
+
+.city-selector {
+  border: 1px solid gray;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.location-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 37.5rem;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border: 1px solid black;
+  background-color: #e6e6e6;
+}
+
+@media screen and (max-width: 52rem) {
+  .location-item {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 41.5rem) {
+  .location-item {
+    width: 18.75rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 29.875rem) {
+  .location-item {
+    width: 15.625rem;
+  }
+}
+
+.location-item-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.location-item-image {
+  display: block;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 41.5rem) {
+  .location-item-image {
+    margin: 1.5rem auto;
+  }
+}
+
+.location-item-text {
+  display: block;
+  max-width: 22.5rem;
+}
+
+.location-item-edit {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid black;
+  background: #a7a7a7;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  margin: 0.3125rem 0;
+  margin-left: auto;
+  padding: 1rem;
+}
+
+.location-item-edit:hover {
+  background-color: #c4c4c4;
+}
+
+@media screen and (max-width: 41.5rem) {
+  .location-item-edit {
+    margin: 0.3125rem auto;
+  }
+}
+/*# sourceMappingURL=Overview.css.map */
