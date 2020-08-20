@@ -1,0 +1,24 @@
+@import "../scss/variables";
+
+.navbar {
+    &-session-info {
+        font-size: 0.666rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    &-menu {
+        display: flex;
+
+        margin-top: 4rem;
+
+        justify-content: center;
+
+        &-item {
+            list-style-type: none;
+            padding: 1rem;
+            border: 1px solid gray;
+            margin-right: 0.5rem;
+        }
+    }
+}
