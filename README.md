@@ -9,6 +9,7 @@ https://nodejs.org/en/
 `npm install -g serve`
 
 ### Whilst in the directory containing the interface (index.html)
+changing directories is done using the CD command.
 
 ### run
 `serve -s`
