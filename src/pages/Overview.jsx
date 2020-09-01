@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { dodoFlight, dodoRoutes, timeouts } from '../lib/dodoAirlines';
+import { dodoFlight, dodoRoutes, timeouts, methods } from '../lib/dodoAirlines';
 import './Overview.css';
 import { Link } from 'react-router-dom';
 
@@ -158,6 +158,19 @@ const LocationItem = ({ data }) => {
             <div className="location-item-section">
                 <img className="location-item-image" src={image} />
                 <Link className="location-item-edit" to={`/edit/${data.resid}`}>Edit</Link>
+                <button onClick={async () => {
+
+                    await dodoFlight({
+                        method: methods.post,
+                        url: dodoRoutes.post.deleteRestaurant,
+                        data: {
+                            resid: data.resid,
+                        }
+                    })
+
+                    window.location.reload();
+
+                }} className="location-item-edit">delet this</button>
             </div>
         </div>
     )

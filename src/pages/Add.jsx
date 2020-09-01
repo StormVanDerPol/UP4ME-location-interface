@@ -87,6 +87,7 @@ const Add = () => {
 
     const submitRestaurant = async () => {
 
+
         let toPost = {
             naam: data.name,
             straat: data.street,
@@ -100,27 +101,37 @@ const Add = () => {
             profpic: imageData.imageCompressedSmall,
         }
 
-        if (match)
-            toPost = {
-                ...toPost,
-                resid: match.params.resid,
-            }
+        let canPost = true;
+
+        for (let value of Object.values(toPost)) {
+            if (value.length == 0 || !value)
+                canPost = false;
+        }
 
 
-        await dodoFlight({
-            url: dodoRoutes.post.restaurant,
-            method: methods.post,
-            data: toPost,
-            timeout: timeouts.long,
-        }).then((res) => {
-            if (res) {
-                if (res.data)
-                    alert('success');
-                else
-                    alert('Fail');
-            } else alert('No res')
-        })
+        if (canPost) {
 
+            if (match)
+                toPost = {
+                    ...toPost,
+                    resid: match.params.resid,
+                }
+
+            await dodoFlight({
+                url: dodoRoutes.post.restaurant,
+                method: methods.post,
+                data: toPost,
+                timeout: timeouts.long,
+            }).then((res) => {
+                if (res) {
+                    if (res.data)
+                        alert('success');
+                    else
+                        alert('Fail');
+                } else alert('No res')
+            })
+
+        } else alert(`can't post, data absent`)
     }
 
     return (
