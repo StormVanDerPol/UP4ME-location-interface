@@ -12,7 +12,7 @@ export const methods = {
 export const timeouts = {
     short: 1000,
     medium: 10000,
-    long: 1200000,
+    long: 120000,
 }
 
 export const dodoRoutes = ({
@@ -24,6 +24,7 @@ export const dodoRoutes = ({
     },
     post: {
         restaurant: rootUrl + apiUrl + '/set/restaurant',
+        deleteRestaurant: rootUrl + apiUrl + '/delete/restaurant'
     },
 })
 
