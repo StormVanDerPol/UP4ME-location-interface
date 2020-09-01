@@ -1,13 +1,16 @@
--serving the app locally using npm serve -
+## -serving the app locally using npm serve -
 
+### Install NPM
+https://nodejs.org/en/
 
-Install serve
+### Open a command line tool like CMD/Powershell on windows, or the terminal on OSX, Linux.
 
-npm install -g serve
+### Install serve using 
+`npm install -g serve`
 
-whilst in the same directory as index.html
+### Whilst in the directory containing the interface (index.html)
 
-npx serve
+### run
+`serve -s`
 
-
-App will run at localhost:5000 by default.
+## App will run at localhost:5000 by default.
