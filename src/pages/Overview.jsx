@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { dodoFlight, dodoRoutes, timeouts } from '../lib/dodoAirlines';
+import { dodoFlight, dodoRoutes, timeouts, methods } from '../lib/dodoAirlines';
 import './Overview.css';
 import { Link } from 'react-router-dom';
 
@@ -161,6 +161,7 @@ const LocationItem = ({ data }) => {
                 <button onClick={async () => {
 
                     await dodoFlight({
+                        method: methods.post,
                         url: dodoRoutes.post.deleteRestaurant,
                         data: {
                             resid: data.resid,
