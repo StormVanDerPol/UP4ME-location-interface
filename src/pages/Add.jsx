@@ -3,7 +3,7 @@ import './Add.css';
 import { base64ToMB } from '../lib/base64';
 import { resizeImage } from '../lib/imageManip';
 import { useRouteMatch } from 'react-router-dom';
-import { dodoFlight, methods, dodoRoutes } from '../lib/dodoAirlines';
+import { dodoFlight, methods, dodoRoutes, timeouts } from '../lib/dodoAirlines';
 
 const Add = () => {
 
@@ -97,9 +97,29 @@ const Add = () => {
             stad: data.city,
             stadsdeel: data.part,
             foto1: imageData.imageCompressed,
+            profpic: imageData.imageCompressedSmall,
         }
 
-        let smallPicture = imageData.imageCompressedSmall;
+        if (match)
+            toPost = {
+                ...toPost,
+                resid: match.params.resid,
+            }
+
+
+        await dodoFlight({
+            url: dodoRoutes.post.restaurant,
+            method: methods.post,
+            data: toPost,
+            timeout: timeouts.long,
+        }).then((res) => {
+            if (res) {
+                if (res.data)
+                    alert('success');
+                else
+                    alert('Fail');
+            } else alert('No res')
+        })
 
     }
 
@@ -156,7 +176,7 @@ const Add = () => {
 
                 <div className="add-address-item">
                     <h3 className="add-address-header">Huisnummer</h3>
-                    <input type="number" value={data.number} placeholder="Huisnummer" className="add-text" onChange={(e) => {
+                    <input type="text" value={data.number} placeholder="Huisnummer" className="add-text" onChange={(e) => {
                         setData({
                             ...data,
                             number: e.target.value,
