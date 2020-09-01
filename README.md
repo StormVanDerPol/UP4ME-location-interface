@@ -15,3 +15,5 @@ changing directories is done using the CD command.
 `serve -s`
 
 ## App will run at localhost:5000 by default.
+
+So to use it go to localhost:5000 in your browser
